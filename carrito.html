@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/1444685f3d.js" crossorigin="anonymous"></script>
+    <title>Parrilla a tu antojo</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <header class="header">
+        <h2 class="logo"> <a href="/index.html"></a> Parrilla a tu antojo</h2>
+        <nav class="navbar">
+            <input type="checkbox" id="check">
+					<label for="check" class="toggle__menu">
+						<i class="fa-solid fa-bars"></i>
+					</label>
+            <ul class="navbar-menu">
+            
+                <li>
+                    <a class="boton-volver" href="./index.html">
+                        <i class="fa-solid fa-arrow-left"></i> Seguir Comprando
+                    </a>
+                </li>
+                
+                <li>
+                    <a class="boton-carrito " href="/carrito.html">
+                        <i class="fa-solid fa-cart-shopping"></i> Carrito <span id="valorCarrito" class="numerito">0</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="container-boton">
+            <a href="https://walink.co/b4a84e" target="_blank"> <img class="boton" src="img/whatsapp.png" alt="whatsapp"></a>
+        </div>
+        <section class="productos">
+
+            <h3 class="productos-titulos"> Carrito</h3>
+            <div id="productos"></div>
+            <p id="carr-vacio" class="carrito-vacio"></p>
+            <div class="botones">
+        <div id="btn-eliminar" class="boton-eliminar">
+            <button id="btn-vaciar" class="btn-carrito-vaciar">Vaciar Carrito</button>
+        </div>
+        <div id="finalizar" class="comprar">
+            <button id="btn-finalizar" class="btn-carrito-finalizar">Finalizar Compra</button>
+        </div>
+    </div>
+    <div id="precio" class="precio-final">
+        <p id="precio-final"  class="precio-final-uno">$3000</p>
+    </div>
+
+        </section>
+
+    </main>
+    <footer>
+        <div class="container">
+            <div class="container-flex">
+                <div class="container-titulo">
+                    <p>Todos los derechos estan reservados.</p>
+            </div>
+            <div class="container-redes">
+                <a href="https://www.instagram.com/emi_carda/"><img src="img/instagram (1).png" alt=""></a>
+                <a href="https://www.linkedin.com/in/emi-carda88/"><img src="img/linkedin.png" alt=""></a>
+                <a href="https://github.com/emicarda?tab=repositories"><img src="img/github.png" alt=""></a>
+            </div>
+            </div>
+        </div>
+    </footer>
+    <script src="./script/productos.js"></script>
+    <script src="./script/carrito.js"></script>
+
+</body>
+</html>

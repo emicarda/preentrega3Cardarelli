@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/1444685f3d.js" crossorigin="anonymous"></script>
+    <title>Parrilla a tu antojo</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <header class="header">
+        <h2 class="logo">Parrilla a tu antojo</h2>
+        <nav class="navbar">
+            <input type="checkbox" id="check">
+					<label for="check" class="toggle__menu">
+						<i class="fa-solid fa-bars"></i>
+					</label>
+            <ul class="navbar-menu">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="#nosotros"> Nosotros</a></li>
+                <li><a href="#productos">Productos</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+                <li>
+                    <a class="boton-carrito active" href="./carrito.html">
+                        <i class="fa-solid fa-cart-shopping"></i> Carrito <span id="valorCarrito" class="numerito">0</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <!-- seccion hero-->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-flex">
+                    <div class="hero-information">
+                        
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--nosotros-->
+        <section id="nosotros" class="nosotros">
+            <div class="container">
+                <div class="nosotros-info">
+                    <h3>Quienes Somos</h3>
+                    <p>Somos una empresa familiar dedicada a la venta de todo tipo de parrillas, y accesorios para su hogar. </p>
+                </div>
+            </div>
+        </section>
+        <!--productos-->
+        <section class="productos">
+
+            <h3 class="productos-titulos">Nuestros Productos</h3>
+            <div id="productos"></div>
+        </section>
+    
+        <section id="contacto" class="contacto">
+            <h3 class="contacto-titulo">Contactanos</h3>
+            <div class="container">
+                <div class="contacto-flex">
+                    <form id="form" class="contacto-form">
+                        <input id="nombre-form" class="contacto-input" type="text" placeholder="Tu Nombre" required>
+                        <input id="apellido-form" class="contacto-input" type="text" placeholder="Tu Apellido" required>
+                        <input id="email-form" class="contacto-input" type="email" placeholder="Ejemplo@gmail.com" required>
+                        <textarea id="mensajes-form" class="contacto-textarea" name=""id="" cols="30" rows="10" placeholder="Mensajes..."></textarea>
+                        <button id="btn.form" class="contacto-btn">Enviar</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <div class="container-boton">
+            <a href="https://walink.co/b4a84e" target="_blank"> <img class="boton" src="img/whatsapp.png" alt="whatsapp"></a>
+            </div>
+    </main>
+    <footer>
+        <div class="container">
+            <div class="container-flex">
+                <div class="container-titulo">
+                <p>Todos los derechos estan reservados.</p>
+            </div>
+            <div class="container-redes">
+                <a href="https://www.instagram.com/emi_carda/"><img src="img/instagram (1).png" alt=""></a>
+                <a href="https://www.linkedin.com/in/emi-carda88/"><img src="img/linkedin.png" alt=""></a>
+                <a href="https://github.com/emicarda?tab=repositories"><img src="img/github.png" alt=""></a>
+            </div>
+            </div>
+        </div>
+    </footer>
+    <script src="./script/productos.js"></script>
+    <script src="./script/apps.js"></script>
+    <script src="./script/formulario.js"></script>
+</body>
+</html>
