@@ -55,11 +55,28 @@ pintarProductos()
 
 // aca le agrego la funcion al boton vaciar carrito tambien le agregue toastify
 const eliminarDelCarrito = (id) => {
+
+    Toastify({
+        text: "Producto eliminado",
+        duration: 2000,
+        close: true,
+        gravity: "top", // `top` or `bottom`
+        position: "right", // `left`, `center` or `right`
+        stopOnFocus: true, // Prevents dismissing of toast on hover
+        style: {
+        background: "linear-gradient(to right, #949191,#242121)",
+        borderRadius: "10px",
+        textTransform: "uppercase",
+        fontSize: "12px"
+        },
+        onClick: function(){} // Callback after click
+    }).showToast();
+
     const producto = carrito.findIndex(productos => productos.id === id);
     carrito.splice(producto, 1);
     pintarProductos();
-actualizarPrecioFinal()
-actualizarValorCarrito()
+    actualizarPrecioFinal()
+    actualizarValorCarrito()
 };
 
 
@@ -94,19 +111,34 @@ const vaciarCarrito = () => {
 const finalizarCompra = document.getElementById("btn-finalizar")
 
 finalizarCompra.addEventListener("click", () =>
-{
+    {
     compraFinalizada()
-})
+    })
 
 const compraFinalizada = () => {
-
     if (carrito.length > 0) {
         vaciarCarrito()
         pintarProductos()
-        alert("Muy Bien!, Muchas gracias por tu compra");
+        swal("Muy Bien!", "Muchas gracias por tu compra", "success");
     } else {
-            alert("Upps!, Tu carrito esta vacio");
-    
-            }
+    { swal("Upps!", "Tu carrito esta vacio", "success");}
+    }
 
+}
+
+    // aca use la api de github se puede apreciar el el footer 
+
+    fetch('https://github.com/emicarda')
+    // Exito
+    .then(response => response.json())  // convertir a json
+    .then(json => 
+    actualizarGit(json)
+    
+    )    //imprimir los datos en la consola
+    .catch(err => console.log('Solicitud fallida', err)); // Capturar errores
+    
+    
+    const actualizarGit = (json) => {
+        let valorgit = document.getElementById("githubE");
+        valorgit.textContent=json.login;
     }
